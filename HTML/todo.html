@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Todo List</title>
+</head>
+
+<body onload="checkContentStorage();">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h1 class="card-header">Todo List</h1>
+                    <h2 id="date" class="card-header date"></h2>
+
+
+                    <form class="add-todo-form">
+                        <input id="task" class="col-sx-12 col-sm-5  form-control" type="text" placeholder="Add a new todo">
+                        <input type="date" name="duedate" id="duedate" class="col-sx-12 col-sm-5  form-control" value="2019-04-09">
+                        <button id="add" class="col-3 col-sm-1 btn btn-add">+</button>
+                    </form>
+
+                    <ul id="todos"></ul>
+
+                    <div id="todo-status" class="animated fadeIn">
+                        <img src="../img/confetti2.svg" alt="Celebration! No todo left">
+                        <p>Time to chill! You have no todos left!</p>
+                    </div>
+
+                    <div class="control-button">
+                        <div id="clearBtn" class="btn btn-clear">Clear All</div>
+                        <div id="sortByNameBtn" class="btn btn-sort-name">Sort by name</div>
+                        <div id="sortByDateBtn" class="btn btn-sort-date">Sort by deadline</div>
+                    </div>
+
+
+                </div> <!-- close card -->
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../js/script.js"></script>
+</body>
+
+</html>
